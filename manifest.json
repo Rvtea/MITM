@@ -1,23 +1,23 @@
 {
 	"name": "MITM",
-	"version": "0.0.1",
-	"description": "MITM replace your js/css file",
+	"version": "0.0.2",
+	"description": "MITM replace your page resource file",
+	"homepage_url":"https://github.com/Rvtea/MITM",
   	"manifest_version": 2,
 	"permissions": [
-		"activeTab",
-    	"tabs",
-        "webRequest",
-        "background",
-        "debugger",
-        "notifications",
+		"webRequest",
+		"*://*/*", // Modify here to fit the URL you want this extension to take effect.
+        "webRequestBlocking",
+        "notifications", // TODO: add some notification switch to avoid checking background script
         "storage"
 	],
 	"background":{
 		"persistent": true,
-		"scripts": ["background.js"]
+		"scripts": ["vendor/jquery.min.js", "background.js"]
 	},
 	"browser_action": {
 		"default_icon": "icon.png",
 		"default_popup": "popup.html"
-	}
+    },
+    "web_accessible_resources": ["replace.js"]
 }
