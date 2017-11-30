@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented here. :)
 
+## MITM 0.0.3
+Released on Nov. 30, 2017
+
+### Added
+* Automatically reload page when change extension enable/disable status.
+
 ## MITM 0.0.2
 Implement core functionality. Released on Nov. 30, 2017
 
