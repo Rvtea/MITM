@@ -2,7 +2,7 @@
 
 MITM aka Man-In-The-Middle, means this is kind of interception Chrome Extension when using.
 
-### How To Use ( Ver <= 0.0.3)
+### How To Use ( Ver <= 0.0.4)
 
 For this extension, you need download the whole project and add some extra info to make it work. Below is the step you need to take.
 

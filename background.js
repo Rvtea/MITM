@@ -10,13 +10,12 @@ chrome.storage.local.set({"extensionEnable": extensionEnable}, function() {
 });
 
 // Use storage at local to avoid info sync with popup.js directly
-function checkStorage() {
-    chrome.storage.onChanged.addListener(function(changes, areaname) {
-        console.log("[WARN] Now we have extension enable value as: " + changes["extensionEnable"].newValue);
-        extensionEnable = changes["extensionEnable"].newValue;
-    });
-}
-setInterval(checkStorage, 500);
+chrome.storage.onChanged.addListener(function(changes, areaname) {
+    console.log("[WARN] Now we have extension enable value as: " + changes["extensionEnable"].newValue);
+    extensionEnable = changes["extensionEnable"].newValue;
+    // clear cache to let user reload page with the latest resource from server instead of cache
+    chrome.browsingData.removeCache({'since': 0}, () => console.log("[WARN] Cache removed!"));
+});
 
 // Actual process
 chrome.webRequest.onBeforeRequest.addListener(

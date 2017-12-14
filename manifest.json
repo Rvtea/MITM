@@ -9,7 +9,8 @@
 		"*://*/*", // Modify here to fit the URL you want this extension to take effect.
         "webRequestBlocking",
         "notifications", // TODO: add some notification switch to avoid checking background script
-        "storage"
+		"storage",
+		"browsingData"
 	],
 	"background":{
 		"persistent": true,
