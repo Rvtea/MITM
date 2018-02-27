@@ -1,0 +1,1 @@
+console.log('I am replace.js 哈哈哈');
