@@ -54,7 +54,7 @@ chrome.webRequest.onBeforeRequest.addListener(
       return {redirectUrl: getReplaceFilePath()};
     }
   },
-  {urls: ["*://*/*"]}, // TODO: should be configurable // NOTE by indooorsman: no need to config `urls` here
+  {urls: ["*://*/*"]}, // TODO: should be configurable // NOTE by indooorsman: Hard code is ok here
   ["blocking"]
 );
 
