@@ -7,13 +7,44 @@
     <meta name="author" content="kxu" />
     <script src="vendor/jquery.min.js"></script>
     <script src="popup.js"></script>
+    <style>
+        .row {
+            width: 300px;
+            padding: 5px 0;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 5px;
+        }
+        .label {
+            font-size: 14px;
+        }
+        button {
+            font-size: 14px;
+            padding: 5px 10px;
+        }
+    </style>
 </head>
 
 <body>
     <h1>MITM</h1>
-    <div style="width: 200px;">
-        <span style="font-size: 14px;">Enable Extension</span>
+    <div class="row">
+        <span class="label">Enable Extension</span>
         <input id="extensionSwitch" type="checkbox">
+    </div>
+    <div class="row">
+        <span class="label">URL match regexp:</span>
+        <input id="urlReg" type="text">
+    </div>
+    <div class="row">
+        <span class="label">Choose file to replace:</span>
+        <input id="replaceFilePath" type="file">
+    </div>
+    <div class="row">
+        <span class="label">Current file:</span>
+        <a id="fileName"></a>
+    </div>
+    <div style="text-align: right">
+        <button id="resetBtn">Clear</button>
+        <button id="saveBtn">Save</button>
     </div>
 
 </body>

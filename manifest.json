@@ -10,7 +10,8 @@
         "webRequestBlocking",
         "notifications", // TODO: add some notification switch to avoid checking background script
 		"storage",
-		"browsingData"
+		"browsingData",
+		"unlimitedStorage" // To store a very long url which may have a size of 5M+
 	],
 	"background":{
 		"persistent": true,
