@@ -49,8 +49,6 @@ chrome.webRequest.onBeforeRequest.addListener(
         message: 'Find the matched Resource and will be replaced now!'
       });
 
-      // upper than chrome 58 use chrome.runtime.getURL, otherwise chrome.extension.getURL
-      // NEED COMPATIBILITY
       return {redirectUrl: getReplaceFilePath()};
     }
   },
